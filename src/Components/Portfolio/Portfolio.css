@@ -1,0 +1,587 @@
+* {
+  box-sizing: border-box;  
+}
+
+ul {
+    list-style-type: none;
+}
+
+.link-list-items {
+    display: inline;
+    padding: 4%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+div.row {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+#nav-wrapper {
+    width: 100%;
+}
+
+#nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 75px;
+    color: white;
+    z-index: 4;
+}
+
+#get-to-know-button {
+    position: relative;
+    width: 30%;
+    text-align: center;
+    margin-left: 35%;
+    font-size: 20px;
+    border-radius: 30px;
+    color: white;
+    background-color: #4F8DD9;
+    -o-transition:all .4s ease-out;
+    -ms-transition:all .4s ease-out;
+    -moz-transition:all .4s ease-out; 
+    -webkit-transition:all .4s ease-out;
+    /* ...and now override with proper CSS property */
+    transition:all .2s ease-out;
+}
+
+#get-to-know-button:hover {
+    background-color: #3B69A1; 
+}
+
+button > a {
+    color: white;
+}
+
+button > a:hover {
+    color: white;
+}
+
+#home-content {
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    padding: 25px;
+}
+
+#profile-pic {
+    width: 250px;
+    border-radius: 125px;
+}
+
+.navlinks {
+    color: #BFBFBF;
+    font-size: 18px;
+    -o-transition:color .4s ease-out;
+    -ms-transition:color .4s ease-out;
+    -moz-transition:color .4s ease-out; 
+    -webkit-transition:color .4s ease-out;
+    /* ...and now override with proper CSS property */
+    transition:color .2s ease-out;
+}
+
+.navlinks:hover {
+    color: white;
+}
+
+.active {
+    color: #5DA6FF;
+}
+
+#main-link-list {
+    padding-left: 0 !important;
+    padding-top: 27px;
+    margin: 0 auto;
+}
+
+#name{
+    font-family: "Montserrat";
+    font-weight: bolder;
+    font-size: 90px;
+}
+
+#subtitle {
+    font-size: 40px;
+    font-family: "Raleway";
+    font-weight: lighter;
+}
+
+#nav-wrapper {
+    height: 75px;
+}
+
+#nav {
+    background-color: #4A4A4A;
+    text-align: center;
+}
+
+#home, #main, #sticky-container, #myStory, #portfolio, #resume, #skills, #contact {
+    width: 100%;
+}
+
+#background-video-container {
+    width: 100%;
+}
+
+.fullscreen-bg_video {
+	position: fixed;
+	top: 0;
+    left: 0;
+    right: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+    z-index: -100;
+    overflow: hidden;
+}
+
+#myStory {
+    color: white;
+    height: auto;
+}
+
+.grid {
+    margin-top: 0 !important;
+}
+
+.myStoryCenterCol {
+    text-align: center;
+}
+
+#myStory-title-border {
+    width: 100%;
+    margin: 0 auto;
+    border: 10px solid white;
+    background: rgba(0, 0, 0, 0.00);
+}
+
+#myStory-title {
+    font-size: 120px;
+    font-family: "Montserrat";
+    letter-spacing: 5px;
+    color: #4F8DD9;  
+    background: linear-gradient(to right, #4F8DD9, #5DD7FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.myStoryGrid, .myStoryLeftCol, .myStoryCenterCol, .myStoryRightCol {
+    height: 100%;
+    padding: 0 !important;
+}
+
+#myStoryLeftColDiv {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+    height: 100%;
+}
+
+#myStoryRightColDiv {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+    height: 100%;
+}
+
+#myStoryCenterBackgroundDiv {
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+}
+
+#portfolio-title {
+    font-family: "Montserrat";
+    color: white;
+    font-size: 35px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#portfolio-subtitle {
+    font-family: "Raleway";
+    color: lightgray;
+    font-size: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.line-break {
+    padding: 1px;
+    background-color: #4F8DD9;
+    border: none;
+}
+
+#resume {
+    background-color: #4F8DD9;
+    color: white;
+    height: auto;
+}
+
+#portfolio {
+    background-color: #141414;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+#skills {
+    background-color: #737373;
+    background-image: url("../../images/brick-wall-dark.png");
+    height: auto;
+}
+
+#contact {
+    background-color: #292929;
+    height: 100vh;
+}
+
+#para1, #para2 {
+    color: white;
+    font-family: "Raleway";
+    text-shadow: 1px 1px #000000;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#para1 {
+    padding-top: 50px;
+}
+
+#para2 {
+    padding-bottom: 70px;
+}
+
+.portfolio-grid {
+    margin-top: 20px !important;
+}
+
+.projectTitleGridTop {
+    margin-top: 60px !important;
+}
+
+.projectTitleGridBottom {
+    margin-top: 20px !important;
+}
+
+.projectPicHolder {
+    width: 100%;
+    -o-transition:all .4s ease-out;
+    -ms-transition:all .4s ease-out;
+    -moz-transition:all .4s ease-out; 
+    -webkit-transition:all .4s ease-out;
+}
+
+.projectPicHolder:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.projectDescription {
+    color: white;
+    font-family: "Raleway";
+    font-size: 16px;
+}
+
+.projectTitles {
+    color: white;
+    font-family: "Montserrat";
+    text-align: center;
+    font-size: 30px;
+    -o-transition:color .4s ease-out;
+    -ms-transition:color .4s ease-out;
+    -moz-transition:color .4s ease-out; 
+    -webkit-transition:color .4s ease-out;
+    /* ...and now override with proper CSS property */
+    transition:color .2s ease-out;
+}
+
+.projectDetails {
+    cursor: pointer;
+}
+
+.projectTitles:hover {
+    color: #4F8DD9;
+}
+
+.resume-title-col {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+}
+
+.resumeLeftCol, .resumeRightCol, .resumeCenterCol {
+    padding: 0 !important;
+    height: 100%;
+}
+
+.resumeGrid {
+    height: 100%;
+}
+
+.resumeEntryRow {
+    margin-bottom: 20px !important;
+}
+
+#resume-title {
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 35px;
+}
+
+#resume-subtitle {
+    font-family: "Raleway";
+    color: lightgray;
+    font-size: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.resumeDates {
+    background-color: #4A4A4A !important;
+    text-align: center;
+    padding: 10px !important;
+    font-size: 18px !important;
+    font-family: "Raleway";
+}
+
+#apolloDate {
+    font-size: 16px !important;
+}
+
+.resumeEntryTitle {
+    margin-bottom: 0px;
+}
+
+.resumeEntryDescription {
+    font-size: 18px;
+    color: #4A4A4A;
+    font-style: italic;
+}
+
+.section-title-col {
+    padding-bottom: 40px !important;
+}
+
+.section-title {
+    font-family: "Montserrat";
+    font-size: 30px;
+}
+.accordian {
+    background-color: lightgray;
+    padding: 10px;
+    font-family: "Raleway";
+    font-size: 20px;
+    border-radius: 10px;
+    line-height: 1em;
+    exclusive: false;
+}
+.accordianTitle {
+    padding: 0 !important;
+}
+
+.accordianContent {
+    color: black;
+    font-size: 20px;
+}
+
+.lastCenterColResume {
+    margin-bottom: 75px !important;
+}
+
+#skills-title {
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 35px;
+    color: white;
+    padding-top: 40px !important;
+}
+
+#skills-subtitle {
+    font-family: "Raleway";
+    color: lightgray;
+    font-size: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.skillsLeftCol, skillsCenterCol, .skillsRightCol, .skillsMainRow, .skillsGrid {
+    height: 100%
+}
+
+.skillsGridBottom {
+    padding-top: 60px !important;
+}
+
+.skillsCatTitle {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    padding-bottom: 30px;
+    text-decoration: underline;
+}
+
+#projectManagementTitle {
+    padding-bottom: 0px;
+}
+
+.frontEndTech, .backEndTech, .projectManagementTech {
+    text-align: center !important;
+    font-family: "Raleway"
+}
+
+.frontEndTech {
+    padding-bottom: 50px;
+}
+
+.techImg {
+    width: 75px;
+}
+
+#materialize {
+    height: 75px;
+}
+
+.techs {
+    font-size: 35px;
+    color: white;
+    padding: 15px;
+}
+
+.techName {
+    padding: 15px;
+    padding-bottom: 15px;
+}
+
+#contact-title {
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 35px;
+    color: white;
+    padding-top: 70px !important;
+}
+
+#contact-subtitle {
+    font-family: "Raleway";
+    color: lightgray;
+    font-size: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contactLeftCol, .contactCenterCol, .contactRightCol, .contactMainRow, .contactGrid {
+    height: 100%
+}
+
+#contact-info {
+    text-align: center;
+}
+
+#email {
+    font-family: "Raleway";
+    font-size: 20px;
+    color: white;
+}
+
+#emailContainer {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+#email:hover {
+    color: lightgray;
+}
+
+.socialMediaLogos {
+    width: 125px;
+    padding: 20px;
+}
+
+#socialMediaLinks {
+    text-align: center;
+}
+
+#copyright {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin-top: 210px;
+    text-align: center;
+}
+
+#copyright-text {
+    font-family: "Raleway";
+    font-size: 12px;
+    color: white;
+}
+
+@media only screen and (max-width: 1050px) and (orientation: portrait) {
+    #home-content {
+        margin-top: 250px;
+    }
+
+    #name {
+        margin-top: 100px;
+    }
+    #subtitle {
+        margin-top: 30px;
+    }
+
+    #get-to-know-button {
+        width: 40%;
+        margin-left: 30%;
+        margin-top: 30px;
+    }
+
+    .resumeDates {
+        font-size: 14px !important;
+    }
+
+    .techs {
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+
+    #apolloDate {
+        font-size: 14px !important;
+    }
+}
+
+@media only screen and (max-width: 1050px) and (orientation: landscape) {
+    .resumeDates {
+        font-size: 14px !important;
+    }
+
+    #apolloDate {
+        font-size: 14px !important;
+    }
+}
+
+@media only screen and (max-width: 780px) and (orientation: portrait) {
+    .navlinks {
+        font-size: 16px;
+    }
+
+    #home-content {
+        margin-top: 90px;
+    }
+
+    #name {
+        margin-top: 50px;
+    }
+
+    #get-to-know-button {
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 30px;
+    }
+
+    #myStory-title {
+        font-size: 100px;
+    }
+
+    #para1, #para2 {
+        font-size: 22px;
+    }
+}
