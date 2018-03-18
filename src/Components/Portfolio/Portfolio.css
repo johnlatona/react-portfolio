@@ -18,11 +18,18 @@ div.row {
     padding-top: 0 !important;
 }
 
+.grid {
+    width: 100% !important;
+    margin-left: 0 !important;
+}
+
 #nav-wrapper {
-    width: 100%;
+    width: 100vw;
+    height: 75px;
 }
 
 #nav {
+    width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
@@ -30,6 +37,8 @@ div.row {
     height: 75px;
     color: white;
     z-index: 4;
+    background-color: #4A4A4A;
+    text-align: center;
 }
 
 #get-to-know-button {
@@ -49,7 +58,22 @@ div.row {
     transition:all .2s ease-out;
 }
 
+.toggleMenuButtonMobile {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 5;
+}
+
 #get-to-know-button:hover {
+    background-color: #3B69A1; 
+}
+
+#get-to-know-button:focus {
+    background-color: #3B69A1; 
+}
+
+#get-to-know-button:active {
     background-color: #3B69A1; 
 }
 
@@ -58,6 +82,14 @@ button > a {
 }
 
 button > a:hover {
+    color: white;
+}
+
+button > a:focus {
+    color: white;
+}
+
+button > a:active {
     color: white;
 }
 
@@ -88,6 +120,14 @@ button > a:hover {
     color: white;
 }
 
+.navlinks:focus{
+    color: white;
+}
+
+.navlinks:active {
+    color: white;
+}
+
 .active {
     color: #5DA6FF;
 }
@@ -95,6 +135,7 @@ button > a:hover {
 #main-link-list {
     padding-left: 0 !important;
     padding-top: 27px;
+    overflow: hidden;
     margin: 0 auto;
 }
 
@@ -110,15 +151,6 @@ button > a:hover {
     font-weight: lighter;
 }
 
-#nav-wrapper {
-    height: 75px;
-}
-
-#nav {
-    background-color: #4A4A4A;
-    text-align: center;
-}
-
 #home, #main, #sticky-container, #myStory, #portfolio, #resume, #skills, #contact {
     width: 100%;
 }
@@ -128,11 +160,12 @@ button > a:hover {
 }
 
 .fullscreen-bg_video {
-	position: fixed;
+    position: fixed;
+    padding: 0;
 	top: 0;
     left: 0;
     right: 0;
-	width: 100%;
+	width: 100vw;
 	height: 100%;
 	object-fit: cover;
     z-index: -100;
@@ -266,6 +299,7 @@ button > a:hover {
 
 .projectPicHolder {
     width: 100%;
+    margin-bottom: 20px !important;
     -o-transition:all .4s ease-out;
     -ms-transition:all .4s ease-out;
     -moz-transition:all .4s ease-out; 
@@ -276,6 +310,17 @@ button > a:hover {
     background-color: rgba(255, 255, 255, 0.3);
     cursor: pointer;
 }
+
+.projectPicHolder:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.projectPicHolder:active {
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
 
 .projectDescription {
     color: white;
@@ -301,6 +346,14 @@ button > a:hover {
 }
 
 .projectTitles:hover {
+    color: #4F8DD9;
+}
+
+.projectTitles:focus {
+    color: #4F8DD9;
+}
+
+.projectTitles:active {
     color: #4F8DD9;
 }
 
@@ -412,6 +465,10 @@ button > a:hover {
     padding-top: 60px !important;
 }
 
+.techList {
+    padding-left: 0 !important;
+}
+
 .skillsCatTitle {
     font-size: 30px;
     text-align: center;
@@ -492,6 +549,14 @@ button > a:hover {
     color: lightgray;
 }
 
+#email:focus {
+    color: lightgray;
+}
+
+#email:active {
+    color: lightgray;
+}
+
 .socialMediaLogos {
     width: 125px;
     padding: 20px;
@@ -499,6 +564,7 @@ button > a:hover {
 
 #socialMediaLinks {
     text-align: center;
+    width: 100%;
 }
 
 #copyright {
@@ -515,6 +581,22 @@ button > a:hover {
     font-size: 12px;
     color: white;
 }
+
+
+.ui.inverted.vertical.labeled.icon.ui.overlay.right.thin.sidebar.menu {
+    height: 100vh !important;
+    position: fixed !important;
+    bottom: 0px !important;
+    top: 0px !important;
+  }
+
+  .pusher {
+    margin-left: 20px;
+  }
+
+  .pushable {
+    min-height: 100vh;
+  }
 
 @media only screen and (max-width: 1050px) and (orientation: portrait) {
     #home-content {
@@ -538,8 +620,17 @@ button > a:hover {
         font-size: 14px !important;
     }
 
+    .resumeButtonCol {
+        padding-left: 0 !important;
+    }
+
+    .resumeDateCol {
+        padding-left: 0 !important;
+    }
+
     .techs {
         font-size: 25px;
+        padding: 0;
         padding-bottom: 10px;
     }
 
@@ -556,9 +647,31 @@ button > a:hover {
     #apolloDate {
         font-size: 14px !important;
     }
+
+    #get-to-know-button {
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 30px;
+    }
+
+    .resumeButtonCol {
+        padding-left: 0 !important;
+    }
+
+    .resumeDateCol {
+        padding-left: 0 !important;
+    }
 }
 
 @media only screen and (max-width: 780px) and (orientation: portrait) {
+    .desktopVersion {
+        display: none;
+    }
+
+    .mobileVersion {
+        display: block;
+    }
+    
     .navlinks {
         font-size: 16px;
     }
@@ -583,5 +696,27 @@ button > a:hover {
 
     #para1, #para2 {
         font-size: 22px;
+    }
+
+    .techImg {
+        width: 50px;
+    }
+
+    .resumeButtonCol {
+        padding-left: 0 !important;
+    }
+
+    .resumeDateCol {
+        padding-left: 0 !important;
+    }
+
+    .resumeDates {
+        font-size: 13px !important;
+        padding: 8px !important;
+    }
+
+    #apolloDate {
+        font-size: 13px !important;
+        padding: 8px !important;
     }
 }
