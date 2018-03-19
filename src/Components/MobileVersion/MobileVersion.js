@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Parallax } from 'react-parallax';
 import * as Scroll from "react-scroll";
-import { Button, Grid, Accordion, Segment, Icon, Sidebar, Menu } from "semantic-ui-react";
+import { Button, Grid, Accordion, Segment, Icon, Menu } from "semantic-ui-react";
 import { ProjectContent, ProjectLink } from "../Projects";
 import ReactTooltip from 'react-tooltip';
 import "../Portfolio/Portfolio.css";
@@ -14,7 +14,6 @@ let scrollSpy = Scroll.scrollSpy;
 class MobileVersion extends Component {
 
   state = {
-    visible: false,
     navPosition: "relative",
     activeIndex: -1,
     rutgersButton: {
@@ -115,55 +114,46 @@ class MobileVersion extends Component {
 
     render() {
 
-      const { activeIndex, visible } = this.state;
+      const { activeIndex  } = this.state;
 
       return (
         <div>
           <Button onClick={this.toggleVisibility} className="toggleMenuButtonMobile">Toggle Visibility</Button>
-        <Sidebar.Pushable as={Segment}>
-          <Sidebar
-            as={Menu}
-            animation='overlay'
-            width='thin'
-            direction='right'
-            visible={visible}
-            icon='labeled'
-            vertical
-            inverted
-            className="navMobile"
-          >
-            <Menu.Item name='home'>
-              <Link className="navlinks" activeClass="active" to="home" spy={true} smooth={true} duration={2000} delay={100} isDynamic={true}>
-                 HOME
-              </Link>
-            </Menu.Item>
-            <Menu.Item name='myStory'>
-              <Link className="navlinks" activeClass="active" to="myStory" spy={true} smooth={true} duration={2000} isDynamic={true} >
-                MY STORY
-              </Link>
-            </Menu.Item>
-            <Menu.Item name='portfolio'>
-              <Link className="navlinks" activeClass="active" to="portfolio" spy={true} smooth={true} duration={2000} isDynamic={true} >
-                PORTFOLIO
-              </Link>
-            </Menu.Item>
-            <Menu.Item name='resume'>
-              <Link className="navlinks" activeClass="active" to="resume" spy={true} smooth={true} duration={2000} isDynamic={true} >
-                RESUME
-              </Link>
-            </Menu.Item>
-            <Menu.Item name='skills'>
-              <Link className="navlinks" activeClass="active" to="skills" spy={true} smooth={true} duration={2000} isDynamic={true} >
-                SKILLS
-              </Link>
-            </Menu.Item>
-            <Menu.Item name='contact'>
-              <Link className="navlinks" activeClass="active" to="contact" spy={true} smooth={true} duration={2000} isDynamic={true} >
-                CONTACT
-              </Link>
-            </Menu.Item>
-          </Sidebar>
-          <Sidebar.Pusher>
+          <div id="menuHolder">
+            <Menu pointing secondary vertical>
+              <Menu.Item> 
+                <Link className="navlinks" activeClass="active" to="home" spy={true} smooth={true} duration={2000} delay={100} isDynamic={true}>
+                  HOME
+                </Link>
+              </Menu.Item>
+              <Menu.Item> 
+                <Link className="navlinks" activeClass="active" to="myStory" spy={true} smooth={true} duration={2000} isDynamic={true} >
+                  MY STORY
+                </Link>
+              </Menu.Item>
+              <Menu.Item> 
+                <Link className="navlinks" activeClass="active" to="portfolio" spy={true} smooth={true} duration={2000} isDynamic={true} >
+                  PORTFOLIO
+                </Link>
+              </Menu.Item>
+              <Menu.Item> 
+                <Link className="navlinks" activeClass="active" to="resume" spy={true} smooth={true} duration={2000} isDynamic={true} >
+                  RESUME
+                </Link>
+              </Menu.Item>
+              <Menu.Item> 
+                <Link className="navlinks" activeClass="active" to="skills" spy={true} smooth={true} duration={2000} isDynamic={true} >
+                  SKILLS
+                </Link>
+              </Menu.Item>
+              <Menu.Item> 
+                <Link className="navlinks" activeClass="active" to="contact" spy={true} smooth={true} duration={2000} isDynamic={true} >
+                  CONTACT
+                </Link>
+              </Menu.Item>
+            </Menu>
+          </div>
+
             <div id="main">
                 <video autoPlay loop muted preload="true" className="fullscreen-bg_video">
                     <source src="../../../videos/typingBackground.mp4"></source>
@@ -591,8 +581,6 @@ class MobileVersion extends Component {
               </div>
 
           </div> 
-          </Sidebar.Pusher>
-        </Sidebar.Pushable>
       </div>
         
       )
