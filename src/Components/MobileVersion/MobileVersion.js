@@ -15,6 +15,7 @@ class MobileVersion extends Component {
 
   state = {
     visible: false,
+    menuXPosition: 150,
     navPosition: "relative",
     activeIndex: -1,
     rutgersButton: {
@@ -60,7 +61,25 @@ class MobileVersion extends Component {
     scrollSpy.update();
   }
 
-  toggleVisibility = () => this.setState({ visible: !this.state.visible });
+  toggleVisibility = () => {
+    this.setState({ visible: !this.state.visible });
+    console.log(this.state.visible);
+
+    const menuClose = () => {
+      this.setState({menuXPosition: 150});
+    }
+
+    const menuOpen = () => {
+      this.setState({menuXPosition: 0});
+    }
+
+    if(this.state.visible === false) {
+      menuOpen();
+    }
+    else {
+      menuClose();
+    }
+  }
 
   handleClick = (e, titleProps) => {
     const { index, className } = titleProps
@@ -115,12 +134,19 @@ class MobileVersion extends Component {
 
     render() {
 
-      const { activeIndex  } = this.state;
+      const { activeIndex, menuXPosition } = this.state;
 
       return (
         <div>
           <Button onClick={this.toggleVisibility} className="toggleMenuButtonMobile">Toggle Visibility</Button>
-          <div id="menuHolder">
+          <div 
+            id="menuHolder" 
+            style={{
+              "-ms-transform": `translate(${menuXPosition}px)`, 
+              "-webkit-transform": `translate(${menuXPosition}px)`, 
+              "transform": `translate(${menuXPosition}px)`
+            }}
+          >
             <Menu pointing secondary vertical>
               <Menu.Item> 
                 <Link className="navlinks" activeClass="active" to="home" spy={true} smooth={true} duration={2000} delay={100} isDynamic={true}>
