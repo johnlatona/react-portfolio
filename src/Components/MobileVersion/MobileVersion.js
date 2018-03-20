@@ -14,6 +14,7 @@ let scrollSpy = Scroll.scrollSpy;
 class MobileVersion extends Component {
 
   state = {
+    visible: false,
     navPosition: "relative",
     activeIndex: -1,
     rutgersButton: {

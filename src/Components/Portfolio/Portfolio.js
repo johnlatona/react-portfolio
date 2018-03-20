@@ -23,7 +23,7 @@ class Portfolio extends Component {
   render() {
     const { width } = this.state;
     let isMobile;
-    if(width <= 780) {
+    if(width <= 850) {
       isMobile = true;
     }
     else {
