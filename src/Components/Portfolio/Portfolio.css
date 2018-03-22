@@ -829,6 +829,10 @@ div.ui.vertical.menu {
           width: 50px;
       }
 
+      #materialize {
+        max-height: 50px;
+    }
+
       .section-title {
           text-align: center;
       }
