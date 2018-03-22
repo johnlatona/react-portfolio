@@ -186,7 +186,7 @@ class MobileVersion extends Component {
           </div>
 
             <div id="main">
-                <video autoPlay loop muted preload="true" className="fullscreen-bg_video">
+                <video autoPlay loop muted preload="true" poster="../../../images/videoPoster.png" className="fullscreen-bg_video">
                     <source src="../../../videos/typingBackground.mp4"></source>
                 </video>
               <div style={{ height: '95vh', position: "static", zIndex: "3"}} id="home">
