@@ -14,7 +14,6 @@ let scrollSpy = Scroll.scrollSpy;
 class DesktopVersion extends Component {
 
   state = {
-    navPosition: "relative",
     activeIndex: -1,
     rutgersButton: {
       icon: "plus",
@@ -47,14 +46,6 @@ class DesktopVersion extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener("scroll", () => {
-      if(document.getElementById("nav").style.position === "fixed") {
-        this.setState({navPosition: "fixed"});
-      }
-      else {
-        this.setState({navPosition: "relative"});
-      }
-    })
 
     Events.scrollEvent.register('begin', function(to, element) {
       console.log("begin", arguments);
@@ -504,7 +495,7 @@ class DesktopVersion extends Component {
                     </Grid.Column>
                     <Grid.Column width={10} className="skillsCenterCol">
                       <h1 id="skills-title">MY SKILLSET</h1>
-                      <h4 id="skills-subtitle">Specific technologies I have in my Web Development toolkit</h4>
+                      <h4 id="skills-subtitle">Specific technologies I have in my Web Development tool kit</h4>
                       <hr className="line-break"/>
                     </Grid.Column>
                     <Grid.Column width={3} className="skillsRightCol">

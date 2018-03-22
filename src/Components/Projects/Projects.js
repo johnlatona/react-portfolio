@@ -5,7 +5,7 @@ export const ProjectContent = (props) => {
     console.log(...rest);
     return (
     <a {...rest} data-tip data-for={props.dataFor} href={props.link} target="_blank" rel="noopener noreferrer" className="projectDetails">
-        <img src={props.img} alt={props.alt} width="100%"/>
+        <img src={props.img} alt={props.alt} width="100%" className="projectImg"/>
         <div className="projectDescription">
             <p>{props.description}</p>
         </div>

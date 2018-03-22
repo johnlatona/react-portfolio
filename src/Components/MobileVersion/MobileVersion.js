@@ -136,9 +136,13 @@ class MobileVersion extends Component {
 
       const { activeIndex, menuXPosition } = this.state;
 
+      const activeStyle = {
+        "color":"rgba(0, 0, 0, 0.00)"
+      }
+
       return (
         <div>
-          <Button onClick={this.toggleVisibility} className="toggleMenuButtonMobile">Toggle Visibility</Button>
+          <Button onClick={this.toggleVisibility} className="toggleMenuButtonMobile"><Icon name="content" size="big"/></Button>
           <div 
             id="menuHolder" 
             style={{
@@ -149,32 +153,32 @@ class MobileVersion extends Component {
           >
             <Menu pointing secondary vertical>
               <Menu.Item> 
-                <Link className="navlinks" activeClass="active" to="home" spy={true} smooth={true} duration={2000} delay={100} isDynamic={true}>
+                <Link className="navlinks" activeClass={activeStyle} to="home" spy={true} smooth={true} duration={2000} delay={100} isDynamic={true}>
                   HOME
                 </Link>
               </Menu.Item>
               <Menu.Item> 
-                <Link className="navlinks" activeClass="active" to="myStory" spy={true} smooth={true} duration={2000} isDynamic={true} >
+                <Link className="navlinks" activeClass={activeStyle} to="myStory" spy={true} smooth={true} duration={2000} isDynamic={true} >
                   MY STORY
                 </Link>
               </Menu.Item>
               <Menu.Item> 
-                <Link className="navlinks" activeClass="active" to="portfolio" spy={true} smooth={true} duration={2000} isDynamic={true} >
+                <Link className="navlinks" activeClass={activeStyle} to="portfolio" spy={true} smooth={true} duration={2000} isDynamic={true} >
                   PORTFOLIO
                 </Link>
               </Menu.Item>
               <Menu.Item> 
-                <Link className="navlinks" activeClass="active" to="resume" spy={true} smooth={true} duration={2000} isDynamic={true} >
+                <Link className="navlinks" activeClass={activeStyle} to="resume" spy={true} smooth={true} duration={2000} isDynamic={true} >
                   RESUME
                 </Link>
               </Menu.Item>
               <Menu.Item> 
-                <Link className="navlinks" activeClass="active" to="skills" spy={true} smooth={true} duration={2000} isDynamic={true} >
+                <Link className="navlinks" activeClass={activeStyle} to="skills" spy={true} smooth={true} duration={2000} isDynamic={true} >
                   SKILLS
                 </Link>
               </Menu.Item>
               <Menu.Item> 
-                <Link className="navlinks" activeClass="active" to="contact" spy={true} smooth={true} duration={2000} isDynamic={true} >
+                <Link className="navlinks" activeClass={activeStyle} to="contact" spy={true} smooth={true} duration={2000} isDynamic={true} >
                   CONTACT
                 </Link>
               </Menu.Item>
@@ -188,9 +192,9 @@ class MobileVersion extends Component {
               <div style={{ height: '95vh', position: "static", zIndex: "3"}} id="home">
                 <Grid columns={3}>
                   <Grid.Row>
-                    <Grid.Column width={2}>
+                    <Grid.Column computer={2} tablet={2} mobile={1}>
                     </Grid.Column>
-                    <Grid.Column width={12}>
+                    <Grid.Column computer={12} tablet={12} mobile={14}>
                       <Grid.Row>
                         <Grid.Column width={16}>
                         <div id="home-content">
@@ -203,14 +207,14 @@ class MobileVersion extends Component {
                       <Grid.Row>
                         <Grid.Column width={16} textAlign="center">
                           <Button id="get-to-know-button">
-                            <Link to="myStory" offset={-75} spy={true} smooth={true} duration={1500} isDynamic={true}>
+                            <Link to="myStory" spy={true} smooth={true} duration={1500} isDynamic={true}>
                             GET TO KNOW ME
                             </Link>
                           </Button>
                         </Grid.Column>
                       </Grid.Row>
                     </Grid.Column>
-                    <Grid.Column width={2}>
+                    <Grid.Column computer={2} tablet={2} mobile={1}>
                     </Grid.Column>
                   </Grid.Row>
                 </Grid>
@@ -325,10 +329,10 @@ class MobileVersion extends Component {
               <div style={{"position": "relative", "zIndex": "3"}} id="resume">
                 <Grid columns={3} className="resumeGrid">
                   <Grid.Row className="mainResumeRow">
-                    <Grid.Column computer={3} tablet={2} className="resumeLeftCol">
+                    <Grid.Column computer={3} tablet={2} mobile={1}className="resumeLeftCol">
                       <div id="myStoryLeftColDiv"/>
                     </Grid.Column>
-                    <Grid.Column computer={10} tablet={12} className="resumeCenterCol">
+                    <Grid.Column computer={10} tablet={12} mobile={14}className="resumeCenterCol">
                       <div id="myStoryCenterBackgroundDiv">
                       <Grid>
                         <Grid.Row columns={1}>
@@ -344,15 +348,15 @@ class MobileVersion extends Component {
                           </Grid.Column>
                         </Grid.Row>
                         <Grid.Row columns={3} className="resumeEntryRow">
-                          <Grid.Column width={3} className="resumeDateCol">
+                          <Grid.Column computer={3} tablet={3} mobile={16} className="resumeDateCol">
                             <Segment raised className="resumeDates">
                               2017 - 2018
                             </Segment>
                           </Grid.Column>
-                          <Grid.Column width={1} className="resumeButtonCol">
-                            <Button icon={this.state.rutgersButton.icon} onClick={this.handleClick} active={activeIndex === 0} index={0} className="rutgersButton"/>
+                          <Grid.Column computer={1} tablet={1} mobile={1} className="resumeButtonCol">
+                            <Button icon={this.state.rutgersButton.icon} compact="true" onClick={this.handleClick} active={activeIndex === 0} index={0} className="rutgersButton"/>
                           </Grid.Column>
-                          <Grid.Column width={12}>
+                          <Grid.Column computer={12} tablet={12} mobile={15}>
                             <Accordion className="accordian" >
                               <Accordion.Title active={activeIndex === 0} index={0} className="accordianTitle">
                                 <p className="resumeEntryTitle"><b>RUTGERS UNIVERSITY</b></p>
@@ -367,16 +371,16 @@ class MobileVersion extends Component {
                           </Grid.Column>
                         </Grid.Row>
                         <Grid.Row columns={3} className="resumeEntryRow">
-                          <Grid.Column width={3} className="resumeDateCol">
+                          <Grid.Column computer={3} tablet={3} mobile={16} className="resumeDateCol">
                             <Segment raised className="resumeDates">
                               2005 - 2009
                             </Segment>
                           </Grid.Column>
-                          <Grid.Column width={1} className="resumeButtonCol">
-                            <Button icon={this.state.monmouthButton.icon} onClick={this.handleClick} active={activeIndex === 1} index={1} className="monmouthButton"/>
+                          <Grid.Column computer={1} tablet={1} mobile={1} className="resumeButtonCol">
+                            <Button icon={this.state.monmouthButton.icon} compact="true" onClick={this.handleClick} active={activeIndex === 1} index={1} className="monmouthButton"/>
 
                           </Grid.Column>
-                          <Grid.Column width={12}>
+                          <Grid.Column computer={12} tablet={12} mobile={15}>
                             <Accordion className="accordian" exclusive="false">
                               <Accordion.Title active={activeIndex === 1} index={1} className="accordianTitle">
                                 <p className="resumeEntryTitle"><b>MONMOUTH UNIVERSITY</b></p>
@@ -396,15 +400,15 @@ class MobileVersion extends Component {
                           </Grid.Column>
                         </Grid.Row>
                         <Grid.Row columns={3} className="resumeEntryRow">
-                          <Grid.Column width={3} className="resumeDateCol">
+                          <Grid.Column computer={3} tablet={3} mobile={16} className="resumeDateCol">
                             <Segment raised className="resumeDates" id="apolloDate">
                               2017 - PRESENT
                             </Segment>
                           </Grid.Column>
-                          <Grid.Column width={1} className="resumeButtonCol">
-                            <Button icon={this.state.apolloButton.icon} onClick={this.handleClick} active={activeIndex === 2} index={2} className="apolloButton"/>
+                          <Grid.Column computer={1} tablet={1} mobile={1} className="resumeButtonCol">
+                            <Button icon={this.state.apolloButton.icon} compact="true" onClick={this.handleClick} active={activeIndex === 2} index={2} className="apolloButton"/>
                           </Grid.Column>
-                          <Grid.Column width={12}>
+                          <Grid.Column computer={12} tablet={12} mobile={15}>
                             <Accordion className="accordian" >
                               <Accordion.Title active={activeIndex === 2} index={2} className="accordianTitle">
                                 <p className="resumeEntryTitle"><b>APOLLO DEALER SERVICES</b></p>
@@ -419,15 +423,15 @@ class MobileVersion extends Component {
                           </Grid.Column>
                         </Grid.Row>
                         <Grid.Row columns={3} className="resumeEntryRow">
-                          <Grid.Column width={3} className="resumeDateCol">
+                          <Grid.Column computer={3} tablet={3} mobile={16} className="resumeDateCol">
                             <Segment raised className="resumeDates">
                               2014 - 2017
                             </Segment>
                           </Grid.Column>
-                          <Grid.Column width={1} className="resumeButtonCol">
-                            <Button icon={this.state.princetonButton.icon} onClick={this.handleClick} active={activeIndex === 3} index={3} className="princetonButton"/>
+                          <Grid.Column computer={1} tablet={1} mobile={1} className="resumeButtonCol">
+                            <Button icon={this.state.princetonButton.icon} compact="true" onClick={this.handleClick} active={activeIndex === 3} index={3} className="princetonButton"/>
                           </Grid.Column>
-                          <Grid.Column width={12}>
+                          <Grid.Column computer={12} tablet={12} mobile={15}>
                             <Accordion className="accordian" >
                               <Accordion.Title active={activeIndex === 3} index={3} className="accordianTitle">
                                 <p className="resumeEntryTitle"><b>PRINCETON DEALER SERVICES</b></p>
@@ -442,15 +446,15 @@ class MobileVersion extends Component {
                           </Grid.Column>
                         </Grid.Row>
                         <Grid.Row columns={3} className="resumeEntryRow">
-                          <Grid.Column width={3} className="resumeDateCol">
+                          <Grid.Column computer={3} tablet={3} mobile={16} className="resumeDateCol">
                             <Segment raised className="resumeDates">
                               2013 - 2014
                             </Segment>
                           </Grid.Column>
-                          <Grid.Column width={1} className="resumeButtonCol">
-                            <Button icon={this.state.tenantButton.icon} onClick={this.handleClick} active={activeIndex === 4} index={4} className="tenantButton"/>
+                          <Grid.Column computer={1} tablet={1} mobile={1} className="resumeButtonCol">
+                            <Button icon={this.state.tenantButton.icon} compact="true" onClick={this.handleClick} active={activeIndex === 4} index={4} className="tenantButton"/>
                           </Grid.Column>
-                          <Grid.Column width={12}>
+                          <Grid.Column computer={12} tablet={12} mobile={15}>
                             <Accordion className="accordian" >
                               <Accordion.Title active={activeIndex === 4} index={4} className="accordianTitle">
                                 <p className="resumeEntryTitle"><b>TENANT EVALUATION</b></p>
@@ -465,15 +469,15 @@ class MobileVersion extends Component {
                           </Grid.Column>
                         </Grid.Row>
                         <Grid.Row columns={3} className="resumeEntryRow">
-                          <Grid.Column width={3} className="resumeDateCol">
+                          <Grid.Column computer={3} tablet={3} mobile={16} className="resumeDateCol">
                             <Segment raised className="resumeDates">
                               2012 - 2013
                             </Segment>
                           </Grid.Column>
-                          <Grid.Column width={1} className="resumeButtonCol">
-                            <Button icon={this.state.kiaButton.icon} onClick={this.handleClick} active={activeIndex === 5} index={5} className="kiaButton"/>
+                          <Grid.Column computer={1} tablet={1} mobile={1} className="resumeButtonCol">
+                            <Button icon={this.state.kiaButton.icon} compact="true" onClick={this.handleClick} active={activeIndex === 5} index={5} className="kiaButton"/>
                           </Grid.Column>
-                          <Grid.Column width={12}>
+                          <Grid.Column computer={12} tablet={12} mobile={15}>
                             <Accordion className="accordian" >
                               <Accordion.Title active={activeIndex === 5} index={5} className="accordianTitle">
                                 <p className="resumeEntryTitle"><b>FREEHOLD KIA</b></p>
@@ -488,15 +492,15 @@ class MobileVersion extends Component {
                           </Grid.Column>
                         </Grid.Row>
                         <Grid.Row columns={3} className="resumeEntryRow">
-                          <Grid.Column width={3} className="resumeDateCol">
+                          <Grid.Column computer={3} tablet={3} mobile={16} className="resumeDateCol">
                             <Segment raised className="resumeDates">
                               2011 - 2012
                             </Segment>
                           </Grid.Column>
-                          <Grid.Column width={1} className="resumeButtonCol">
-                            <Button icon={this.state.gmcButton.icon} onClick={this.handleClick} active={activeIndex === 6} index={6} className="gmcButton"/>
+                          <Grid.Column computer={1} tablet={1} mobile={1} className="resumeButtonCol">
+                            <Button icon={this.state.gmcButton.icon} compact="true" onClick={this.handleClick} active={activeIndex === 6} index={6} className="gmcButton align center icon"/>
                           </Grid.Column>
-                          <Grid.Column width={12} className="lastCenterColResume">
+                          <Grid.Column computer={12} tablet={12} mobile={15} className="lastCenterColResume">
                             <Accordion className="accordian" >
                               <Accordion.Title active={activeIndex === 6} index={6} className="accordianTitle">
                                 <p className="resumeEntryTitle"><b>MILLER BUICK GMC</b></p>
@@ -513,7 +517,7 @@ class MobileVersion extends Component {
                       </Grid>
                       </div>
                     </Grid.Column>
-                    <Grid.Column computer={3} tablet={2} className="resumeRightCol">
+                    <Grid.Column computer={3} tablet={2} mobile={1} className="resumeRightCol">
                       <div id="myStoryRightColDiv"/>
                     </Grid.Column>
                   </Grid.Row>
@@ -526,7 +530,7 @@ class MobileVersion extends Component {
                     </Grid.Column>
                     <Grid.Column width={10} className="skillsCenterCol">
                       <h1 id="skills-title">MY SKILLSET</h1>
-                      <h4 id="skills-subtitle">Specific technologies I have in my Web Development toolkit</h4>
+                      <h4 id="skills-subtitle">Specific technologies I have in my Web Development tool kit</h4>
                       <hr className="line-break"/>
                     </Grid.Column>
                     <Grid.Column width={3} className="skillsRightCol">
@@ -534,8 +538,8 @@ class MobileVersion extends Component {
                   </Grid.Row>
                 </Grid>
                 <Grid className="skillsGridBottom" columns="equal">
-                  <Grid.Row className="techSkills">
-                    <Grid.Column className="frontEndTech">
+                  <Grid.Row centered className="techSkills">
+                    <Grid.Column className="frontEndTech" computer={5} tablet={5} mobile={16}>
                       <h2 className="skillsCatTitle">FRONT END TECHNOLOGIES</h2>
                       <ul className="techList">
                         <li className="techs"><img src={require("../../images/logos/html5.png")} alt="html5" className="techImg"/><span className="techName">HTML 5</span></li>
@@ -548,22 +552,22 @@ class MobileVersion extends Component {
                         <li className="techs"><img src={require("../../images/logos/semantic-ui.png")} alt="semantic-ui" className="techImg" id="materialize"/><span className="techName">Semantic UI</span></li>
                       </ul>
                     </Grid.Column>
-                    <Grid.Column className="backEndTech">
+                    <Grid.Column className="backEndTech" computer={5} tablet={5} mobile={16}>
                     <h2 className="skillsCatTitle">BACK END TECHNOLOGIES</h2>
                       <ul className="techList">
                         <li className="techs"><img src={require("../../images/logos/node.png")} alt="node" className="techImg"/><span className="techName">NodeJS</span></li>
                         <li className="techs"><img src={require("../../images/logos/express.png")} alt="express" className="techImg"/><span className="techName">ExpressJS</span></li>
                         <li className="techs"><img src={require("../../images/logos/MySQL.png")} alt="MySQL" className="techImg"/><span className="techName">MySQL</span></li>
-                        <li className="techs"><img src={require("../../images/logos/mongodb.png")} alt="mongoDB" className="techImg"/><span className="techName">MongoDB</span></li>
+                        <li className="techs" id="mongo"><img src={require("../../images/logos/mongodb.png")} alt="mongoDB" className="techImg"/><span className="techName">MongoDB</span></li>
                       </ul>
                     </Grid.Column>
-                    <Grid.Column className="projectManagementTech">
+                    <Grid.Column className="projectManagementTech" computer={5} tablet={5} mobile={16}>
                     <h2 className="skillsCatTitle" id="projectManagementTitle">PROJECT MANAGEMENT<br/>TOOLS</h2>
                       <ul className="techList">
-                        <li className="techs"><img src={require("../../images/logos/bash.png")} alt="bash" className="techImg"/><span className="techName">Bash</span></li>
+                        <li className="techs" id="bash"><img src={require("../../images/logos/bash.png")} alt="bash" className="techImg"/><span className="techName">Bash</span></li>
                         <li className="techs"><img src={require("../../images/logos/git.png")} alt="git" className="techImg"/><span className="techName">Git</span></li>
                         <li className="techs"><img src={require("../../images/logos/github.png")} alt="github" className="techImg"/><span className="techName">Github</span></li>
-                        <li className="techs"><img src={require("../../images/logos/heroku.png")} alt="heroku" className="techImg"/><span className="techName">Heroku</span></li>
+                        <li className="techs" id="heroku"><img src={require("../../images/logos/heroku.png")} alt="heroku" className="techImg"/><span className="techName">Heroku</span></li>
                       </ul>
                     </Grid.Column>
                   </Grid.Row>

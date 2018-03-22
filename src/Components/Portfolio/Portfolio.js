@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MobileVersion from "../MobileVersion";
 import DesktopVersion from "../DesktopVersion";
-import "./Portfolio.css";
+import "../Portfolio/Portfolio.css";
 
 class Portfolio extends Component {
   state = {
@@ -22,19 +22,12 @@ class Portfolio extends Component {
   
   render() {
     const { width } = this.state;
-    let isMobile;
     if(width <= 850) {
-      isMobile = true;
-    }
-    else {
-      isMobile = false;
-    }
-    
-    if (isMobile) {
       return (
         <MobileVersion/>
       );
-    } else {
+    }
+    else {
       return (
         <DesktopVersion/>
       );
