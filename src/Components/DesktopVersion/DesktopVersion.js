@@ -154,7 +154,7 @@ class DesktopVersion extends Component {
                 </ul>
               </nav>
             </div>
-              <div style={{ height: '95vh', position: "static", zIndex: "3"}} id="home">
+              <div style={{ height: 'auto', position: "static", zIndex: "3"}} id="home">
                 <Grid columns={3}>
                   <Grid.Row>
                     <Grid.Column width={2}>

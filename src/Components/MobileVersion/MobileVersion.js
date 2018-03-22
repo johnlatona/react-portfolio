@@ -189,7 +189,7 @@ class MobileVersion extends Component {
                 <video autoPlay loop muted preload="true" poster="../../../images/videoPoster.png" className="fullscreen-bg_video">
                     <source src="../../../videos/typingBackground.mp4"></source>
                 </video>
-              <div style={{ height: '95vh', position: "static", zIndex: "3"}} id="home">
+              <div style={{ height: 'auto', position: "static", zIndex: "3"}} id="home">
                 <Grid columns={3}>
                   <Grid.Row>
                     <Grid.Column computer={2} tablet={2} mobile={1}>
